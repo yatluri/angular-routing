@@ -1,0 +1,38 @@
+{
+  "productCollection": [
+    {
+      "Id": 436,
+      "SubTypeCode": "none",
+      "CompanyId": 601497,
+      "StatusCode": "INAC",
+      "BussinessLevelCode": "COMP",
+      "UserId": 0,
+      "Description": "Caroline's test",
+      "Name": "1",
+      "MediaId": "0",
+      "MediaPath": "",
+      "UserdOnCompanyStore": false,
+      "ProductCount": 0,
+      "WebsiteCout": 0,
+      "DisplaySequence": 0,
+      "IsVisible": true
+    },
+    {
+      "Id": 308,
+      "SubTypeCode": "none",
+      "CompanyId": 601497,
+      "StatusCode": "ACTV",
+      "BussinessLevelCode": "COMP",
+      "UserId": 0,
+      "Description": "1.2346+99",
+      "Name": "2012 Andrei",
+      "MediaId": "5919887",
+      "MediaPath": "5919887",
+      "UserdOnCompanyStore": true,
+      "ProductCount": 8,
+      "WebsiteCout": 5,
+      "DisplaySequence": null,
+      "IsVisible": true
+    }
+  ]
+}
