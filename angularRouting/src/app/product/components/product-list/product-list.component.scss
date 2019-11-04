@@ -1,0 +1,22 @@
+table > tbody > tr > td {
+  text-align: center;
+}
+
+.td-content-align {
+  vertical-align: middle !important;
+}
+.img-container {
+  max-width: 150px;
+  min-height: 50px;
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  height: auto;
+}
+.tr-data {
+  max-height: 125px;
+}
+img {
+  width: 100%;
+}

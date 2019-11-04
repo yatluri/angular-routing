@@ -1,1 +1,55 @@
-<p>product-list works!</p>
+<br />
+<div class="row">
+  <div class="container">
+    <div class="col-xs-10">
+      <div class="card bg-default shadow  mb-5 bg-white rounded">
+        <div class="card-header">
+          <h3>Products</h3>
+        </div>
+        <div class="card-body">
+          <ng-container *ngIf="pCollection$ | async as products">
+            <table class="table table-bordered  table-striped">
+              <thead>
+                <tr scope="row" class="primary">
+                  <th></th>
+                  <th>Name</th>
+                  <th>Status</th>
+                  <th>Description</th>
+                  <th>Product Count</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let p of products" valign="middle" class="tr-data">
+                  <td>
+                    <div class="img-container">
+                      <img
+                        [src]="p.MediaPath"
+                        class="h-50 img img-responsive img-thumbnail"
+                      />
+                    </div>
+                  </td>
+                  <td class="td-content-align">
+                    {{ p.Name }}
+                  </td>
+                  <td class="td-content-align">{{ p.StatusCode }}</td>
+                  <td class="td-content-align">{{ p.Description }}</td>
+                  <td class="td-content-align">{{ p.ProductCount }}</td>
+                  <td class="td-content-align">
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      (click)="onProductEdit(p)"
+                    >
+                      Edit
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
