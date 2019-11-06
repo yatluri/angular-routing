@@ -1,17 +1,28 @@
 .img-container {
-    max-width: 150px;
-    min-height: 50px;
-    padding: 0.25rem;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
-    height: auto;
-  }
-  img {
-      width: 100%;
-  }
-  .product-name {
-    vertical-align: middle !important;
-    line-height: 6.8rem;
-    text-align: justify;
-  }
+  max-width: 150px;
+  min-height: 50px;
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  height: auto;
+}
+img {
+  width: 100%;
+}
+.product-name {
+  vertical-align: middle !important;
+  text-align: justify;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn-margin {
+  margin: 5px;
+}

@@ -1,34 +1,35 @@
 <br/>
 <form [formGroup]="productEditForm" novalidate>
 <div class="row">
-    <div class="container">
-        <div class="col-10">
+        <div class="col-5 container">
             <div class="card bg-default shadow  mb-5 bg-white rounded">
                 <div class="card-header">
                     <h3>Product Detail</h3>
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-2 no-gutters">
+                        <div class="col-3 no-gutters">
                             <div class="img-container">
                             <ng-container>
                                 <img [src]="productEditForm.get('MediaPath').value" class="h-50 img img-responsive img-thumbnail" />
-                            </ng-container>                            
+                            </ng-container>
                         </div>
                     </div>
-                    <div class="col-5 no-gutters">
+                    <div class="col-8 no-gutters">
                         <h3 class="product-name"> {{productEditForm.get('Name').value}}</h3>
                     </div>
                 </div>
                 <hr/>
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-12">
                         <div class="form-group">
                             <label for="Description">Description</label>
                             <textarea class="form-control" formControlName="Description"></textarea>
                         </div>
                     </div>
-                    <div class="col-6">
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
                         <div class="form-group">
                             <label for="BusinessType">
                                     BusinessType
@@ -39,10 +40,35 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="productCount">
+                        Product Count
+                      </label>
+                      <input type="text" formControlName="ProductCount" class="form-control" placeholder="Please specify the product count" />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <label for="status">
+                      Status
+                    </label>
+                    <select class="form-control"  formControlName="StatusCode">
+                      <option *ngFor="let s of vm.statusCode" [value]="s">{{s}}</option>
+                    </select>
+                  </div>
+                </div>
+            </div>
+            <div class="card-footer">
+              <span class="float-right">
+              <button class="btn btn-outline-secondary btn-margin" [routerLink]="['/products/product-list']">Back</button>
+              <button class="btn btn-primary btn-margin">Save</button>
+              </span>
             </div>
         </div>
     </div>
-</div>
 </div>
 </form>
 

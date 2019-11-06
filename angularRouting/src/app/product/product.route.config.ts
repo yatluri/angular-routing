@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+// components
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductEditComponent } from './components/product-edit/product-edit.component';
+
+// resolvers
+import { ProductResolverService } from './resolvers/product-resolver.service';
 
 const productRoutes: Routes = [
   { path: 'product-list', component: ProductListComponent },
@@ -12,7 +17,10 @@ const productRoutes: Routes = [
   },
   {
     path: 'product-edit',
-    component: ProductEditComponent
+    component: ProductEditComponent,
+    resolve: {
+      product: ProductResolverService
+    }
   }
 ];
 
